@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Sorry</title>
+   <style>
+    body{
+        /* background-color: violet; */
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        justify-content: center;
+        /* align-items: center; */
+        background-image: linear-gradient(90deg,violet,purple);
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        border-radius: 1vh;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 5px black;
+    }
+   
+   </style>
+</head>
+<body>
+    <div></div>
+   
+    <script>
+        var button = document.createElement("button")
+        button.textContent = "click"
+        var button1 = document.createElement("button")
+        button1.textContent = "clear"
+        document.body.appendChild(button)
+        document.body.appendChild(button1)
+       
+        button.onclick = ()=>{ 
+                for(i=1; i<=50; i++)
+                {
+                    var elements = document.createElement("h3")
+                    var text = elements.textContent = "'I LOVE YOU'"
+                    elements.style.color = "white"
+                    elements.style.textShadow = "2px 2px 5px black"
+                    document.body.appendChild(elements)
+                    
+                }  
+           
+        }
+        button1.onclick = ()=>{ 
+                document.body.textContent = "Refresh the page"
+        }
+        
+        
+       
+       
+    
+   
+   
+    
+        
+        
+        
+    </script>
+</body>
+</html>
