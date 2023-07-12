@@ -4,12 +4,10 @@
    <title>Sorry</title>
    <style>
     body{
-        /* background-color: violet; */
         display: flex;
         flex-wrap: wrap;
         column-gap: 10px;
         justify-content: center;
-        /* align-items: center; */
         background-image: linear-gradient(90deg,violet,purple);
     }
     button{
@@ -19,13 +17,31 @@
         border: none;
         outline: none;
         box-shadow: 2px 2px 5px black;
+        background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.877),rgba(255, 0, 0, 0.932),rgba(0, 0, 0, 0.877));
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
     }
-   
+    button:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        color: white;
+        letter-spacing: 0.2vw;
+        background-image: linear-gradient(90deg,black,red,black);
+        background-size: 900px;
+        background-position: 900px;
+        animation: animie 2s linear infinite;
+    }
+    @keyframes animie {
+        from{
+            background-position: 900px;
+        }
+        to{
+            background-position: 0px;
+        }
+    }
    </style>
 </head>
 <body>
-    <div></div>
-   
     <script>
         var button = document.createElement("button")
         button.textContent = "click"
@@ -33,33 +49,25 @@
         button1.textContent = "clear"
         document.body.appendChild(button)
         document.body.appendChild(button1)
-       
         button.onclick = ()=>{ 
                 for(i=1; i<=50; i++)
                 {
                     var elements = document.createElement("h3")
                     var text = elements.textContent = "'I LOVE YOU'"
                     elements.style.color = "white"
+                    elements.style.fontFamily = "'Courier New', Courier, monospace"
                     elements.style.textShadow = "2px 2px 5px black"
                     document.body.appendChild(elements)
-                    
                 }  
-           
         }
         button1.onclick = ()=>{ 
-                document.body.textContent = "Refresh the page"
-        }
-        
-        
-       
-       
-    
-   
-   
-    
-        
-        
-        
+                var cont = document.body
+                cont.textContent = "Refresh the page"
+                cont.style.color = "white"
+                cont.style.fontSize = "24px"
+                cont.style.textShadow = "2px 2px 5px black"
+                cont.style.letterSpacing = "0.7vw"
+        }  
     </script>
 </body>
 </html>
